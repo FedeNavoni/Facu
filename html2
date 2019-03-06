@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang='es-419'>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="icon" href="favicon.ico" />
+		    	
+	
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<title>Guarani - Inscripción a materias</title>
+
+	<script type='text/javascript' src='/fceia/_comp/siu/js/guarani_mash.js' charset="iso-8859-1"></script>
+			<link type='text/css' href='/fceia/_comp/siu/css/guarani_mash.css' rel='stylesheet' />
+			
+
+<!--[if lt IE 9]>
+	<script type='text/javascript' src='/fceia/_comp/js/html5.js'></script>
+<![endif]-->
+
+	 
+	
+<script type='text/javascript'>
+var kernel_config = {
+	widget_count: 3,
+	// Stalls js load until all widgets have loaded css and rendered its content
+	stall_js: false,
+	log: true,
+	alias: '/fceia',
+	pretty_urls: true,
+	op_default: 'inicio_alumno',
+	op_actual: 'cursada',
+	historia_activa: false,
+		es_produccion: true
+};
+var url_cambio_perfil = "https://guaraniweb.unr.edu.ar:443/fceia/acceso/perfil";
+var url_cambio_carrera = "https://guaraniweb.unr.edu.ar:443/fceia/acceso/cambiar_carrera";
+
+</script>
+
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-66790388-1' ]);
+	  	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+</script>
+
+    </head>
+    
+    <body>
+		<div id='_msg_placeholder' style='display:none;' class='alert' role="alert"></div>
+        <a class="acchide" href="#kernel_contenido" id="saltar_cppal">Saltar al contenido principal</a>
+<div class="brand-nav">
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span3">
+				<a class="brand" href="https://guaraniweb.unr.edu.ar:443/fceia/inicio_alumno"><h1><img alt='SIU Guaran&iacute; - Sistema de Gesti&oacute;n Academica' src="/fceia/_comp/siu/img/logo-transparente.png" /></h1></a>
+			</div>
+
+			<div class="span9">
+							<div class="row-fluid">
+					<div class="span12">
+						<div class="navbar user-navbar clearfix">
+							<ul class="nav pull-right">
+
+                                                                    <li class="notificaciones" title="Requisitos Pendientes">
+                                        <a href="https://guaraniweb.unr.edu.ar:443/fceia/requisitos_ingreso"><span class="icon-check"></span><span class="acchide">Requisitos_ingreso</span> <span id='js-cant-requisitos' class="badge ">0</span></a>
+                                    </li>
+                                 
+									
+                                                                    <li class="notificaciones">
+                                        <a href="https://guaraniweb.unr.edu.ar:443/fceia/mensajes"><span class="icon-envelope"></span><span class="acchide">Mensajes</span> <span id='js-cant-mensajes' class="badge ">0</span></a>
+                                    </li>
+                                
+								<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-user"></span> Federico Navoni (N-1179/7)    <span class="caret"></span><span class="acchide">Desplegar menú perfil</span></a>
+								<ul class="dropdown-menu">
+
+                                    									    <li><a href='https://guaraniweb.unr.edu.ar:443/fceia/configuracion'><span class="icon-cog"></span> Configuración</a></li>
+                                    
+									<li><a href='https://guaraniweb.unr.edu.ar:443/fceia/acceso/logout'><span class="icon-off"></span> Cerrar sesión</a></li>
+								</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+								<div class="row-fluid">
+					<div class="span12">
+						<div class="form-horizontal carreras">
+							<div class="pull-right control-group">
+															<span>Carrera:</span>
+								<span class="control-label-carrera">Ingeniería Mecánica</span>
+														</div>
+						</div>
+					</div>
+				</div>
+										</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="navbar main-nav">
+    <div class="navbar-inner">
+        <div class="container tb-fix-ancho-fijo">
+            <div role="navigation">
+
+                                    <ul id='js-nav' class='nav'>
+                        
+                            
+                                <li id='cursada' class='js-menuitem-root menu-item-seleccionado'>
+                                    <a href='https://guaraniweb.unr.edu.ar:443/fceia/cursada'>Inscripción Materias</a>
+                                </li>
+
+                                                    
+                            
+                                <li id='examen' class='js-menuitem-root '>
+                                    <a href='https://guaraniweb.unr.edu.ar:443/fceia/examen'>Inscripción Exámenes</a>
+                                </li>
+
+                                                    
+                            
+                                <li class='dropdown js-menuitem-root '>
+                                    
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes <b class="caret"></b></a>
+    
+    <ul class='dropdown-menu'>
+
+        
+            <li id='historia_academica'><a href='https://guaraniweb.unr.edu.ar:443/fceia/historia_academica'>Historia académica</a></li>
+
+        
+            <li id='plan'><a href='https://guaraniweb.unr.edu.ar:443/fceia/plan'>Plan de estudios</a></li>
+
+        
+            <li id='actuacion_provisoria_cursada'><a href='https://guaraniweb.unr.edu.ar:443/fceia/actuacion_provisoria_cursada'>Actuación provisoria de cursadas</a></li>
+
+        
+            <li id='actuacion_provisoria_examen'><a href='https://guaraniweb.unr.edu.ar:443/fceia/actuacion_provisoria_examen'>Actuación provisoria de exámenes</a></li>
+
+        
+            <li id='aulas'><a href='https://guaraniweb.unr.edu.ar:443/fceia/aulas'>Agenda de Clases</a></li>
+
+        
+            <li id='tesis'><a href='https://guaraniweb.unr.edu.ar:443/fceia/tesis'>Estado de tesis</a></li>
+
+        
+            <li id='regularidades'><a href='https://guaraniweb.unr.edu.ar:443/fceia/regularidades'>Regularidades</a></li>
+
+        
+            <li id='creditos'><a href='https://guaraniweb.unr.edu.ar:443/fceia/creditos'>Créditos</a></li>
+
+        
+            <li id='temas_dictados'><a href='https://guaraniweb.unr.edu.ar:443/fceia/temas_dictados'>Temas dictados por clase</a></li>
+
+        
+            <li id='estado_titulo'><a href='https://guaraniweb.unr.edu.ar:443/fceia/estado_titulo'>Estado de Solicitud de Títulos</a></li>
+
+        
+            <li id='inscripciones'><a href='https://guaraniweb.unr.edu.ar:443/fceia/inscripciones'>Mis inscripciones</a></li>
+
+        
+            <li id='reinscripciones'><a href='https://guaraniweb.unr.edu.ar:443/fceia/reinscripciones'>Reinscripciones a Carreras</a></li>
+
+        
+            <li id='historial_asistencias'><a href='https://guaraniweb.unr.edu.ar:443/fceia/historial_asistencias'>Historial de Asistencias</a></li>
+
+        
+            <li id='encuestas_respondidas'><a href='https://guaraniweb.unr.edu.ar:443/fceia/encuestas_respondidas'>Encuestas respondidas</a></li>
+
+        
+        
+    </ul>
+
+    
+
+                                </li>
+
+                                                    
+                            
+                                <li class='dropdown js-menuitem-root '>
+                                    
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trámites <b class="caret"></b></a>
+    
+    <ul class='dropdown-menu'>
+
+        
+            <li id='censo'><a href='https://guaraniweb.unr.edu.ar:443/fceia/censo'>Mis datos personales</a></li>
+
+        
+            <li id='encuestas_kolla'><a href='https://guaraniweb.unr.edu.ar:443/fceia/encuestas'>Encuestas pendientes</a></li>
+
+        
+            <li id='solicitud_certificado'><a href='https://guaraniweb.unr.edu.ar:443/fceia/solicitud_certificado'>Solicitud de certificados</a></li>
+
+        
+            <li id='reinscripcion'><a href='https://guaraniweb.unr.edu.ar:443/fceia/reinscripcion'>Reinscripción</a></li>
+
+        
+            <li id='orientacion'><a href='https://guaraniweb.unr.edu.ar:443/fceia/orientacion'>Orientación</a></li>
+
+        
+        
+    </ul>
+
+    
+
+                                </li>
+
+                                                                        </ul>
+                
+                
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!-- container-fluid -->
+    </div>
+    <!-- navbar-inner -->
+</div><!-- navbar -->
+
+
+<!-- https://gist.github.com/tentacode/3892186 -->
+
+        <div id='loading'></div>
+		<div id='loading_top' style='display:none;'>cargando...</div>
+		<div id='kernel_contenido' role="main" class="container">
+						
+<div id='layout_bl_dos_columnas' class="row-fluid">
+    <div class="span9">
+		<div class='titulo_operacion'>
+				<h2>Inscripción a materias</h2>
+			</div>
+		<div class="row-fluid">
+			<div id="columna_1" class="span4">	<div id='lista_materias'  class='pagelet'></div>
+</div>
+			<div id="columna_2" class="span8">	    <div id='info_materia' aria-live='polite' class="pagelet"></div>
+
+</div>
+		</div>
+    </div>
+		
+    <div id="columna_3" class="span3">
+					    <div id='notificaciones' aria-live='polite' class="pagelet"></div>
+
+	    </div>
+</div>
+			<script type='text/javascript'>kernel.renderer.on_arrival({"css":["\/fceia\/_comp\/siu\/operaciones\/cursada\/info_materia\/default.css"],"js":["\/fceia\/_comp\/siu\/operaciones\/cursada\/info_materia\/pagelet_info_materia.js"],"op":"cursada","info":{"id":"info_materia","visible":"1","estado":"inicial","mensajes":{"error_subcomision":"Debe seleccionar una subcomisi\u00f3n por cada tipo de clase"},"msg_baja":"Est\u00e1s seguro de dar de baja la inscripci\u00f3n a cursada?","msg_confirmar_baja":"Dar de baja","msg_baja_exitosa":"La baja se registr\u00f3 exitosamente","msg_titulo_enviar":"Enviar comprobante por mail","msg_enviar":"Se enviar\u00e1 un mail a <i>navonimerz@gmail.com<\/i> con el comprobante","msg_enviar_boton":"Enviar por mail","msg_falta_mail":"No hay un email registrado. Puede ingresar su email desde <a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/configuracion'>aqu\u00ed<\/a>","envio_mail_exitoso":"El mail se ha enviado con \u00e9xito","falta_mail":"","url_baja_inicial":"https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/baja_inicial"},"content":"        \t\t\t\n<div>\n\t<h3>Comenzar inscripci\u00f3n<\/h3>\n\t<p><span class=\"icon-arrow-left\"><\/span> Seleccion\u00e1 una materia del listado para ver aqu\u00ed las c\u00e1tedras y comisiones a las que te pod\u00e9s inscribir<\/p>\n\t\t\n\t\t<h4>Inscripciones activas<\/h4>\n\t\t<span class='js-csrf hide' data-csrf='csrf4d74fec3492e596c7e63adc8df7db1e436e456c7'\/>\n\t\t<table class=\"table table-striped table-condensed\" summary=\"Tabla con materias a las que estas inscripto, con nombre de materia y acci&oacute;n de dar de baja.\">\n\t\t\t\t\t\t<tr class='js-mis-inscripciones'>\n\t\t\t\t<td scope=\"row\">REPRESENTACION GRAFICA<\/td>\n\t\t\t\t<td>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<button\n\t\t\t\t\t\tclass=\"js-baja-inicial btn btn-mini btn-warning pull-right\" type=\"button\"\n\t\t\t\t\t\tdata-materia=\"11709bbe22a834d5fcfb58579d0db8b8975a2b24\"\n\t\t\t\t\t\tdata-comision=\"fb805b58cc7a35a271966a11920d9946e698bbc0\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\tDar de baja\n\t\t\t\t\t\t<\/button>\n\t\t\t\t\t\t\t\n\t\t\t\t<\/td>\n\t\t\t<\/tr>\n\t\t\t\t\t\t<tr class='js-mis-inscripciones'>\n\t\t\t\t<td scope=\"row\">FISICA II<\/td>\n\t\t\t\t<td>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<button\n\t\t\t\t\t\tclass=\"js-baja-inicial btn btn-mini btn-warning pull-right\" type=\"button\"\n\t\t\t\t\t\tdata-materia=\"77c7ff0645141fc7ea545441e9fe7399d4571223\"\n\t\t\t\t\t\tdata-comision=\"e233b98e16e3c2ccc7f903ca9f57b91f2a265d72\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\tDar de baja\n\t\t\t\t\t\t<\/button>\n\t\t\t\t\t\t\t\n\t\t\t\t<\/td>\n\t\t\t<\/tr>\n\t\t\t\t\t\t<tr class='js-mis-inscripciones'>\n\t\t\t\t<td scope=\"row\">CALCULO III<\/td>\n\t\t\t\t<td>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<button\n\t\t\t\t\t\tclass=\"js-baja-inicial btn btn-mini btn-warning pull-right\" type=\"button\"\n\t\t\t\t\t\tdata-materia=\"aed2a46b6204ff440063e9fb598c4a2a66cc9947\"\n\t\t\t\t\t\tdata-comision=\"b2ecedac387d970691657ec96785f07bdaa89c4a\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\tDar de baja\n\t\t\t\t\t\t<\/button>\n\t\t\t\t\t\t\t\n\t\t\t\t<\/td>\n\t\t\t<\/tr>\n\t\t\t\t\t\t<tr class='js-mis-inscripciones'>\n\t\t\t\t<td scope=\"row\">ALGEBRA LINEAL<\/td>\n\t\t\t\t<td>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<button\n\t\t\t\t\t\tclass=\"js-baja-inicial btn btn-mini btn-warning pull-right\" type=\"button\"\n\t\t\t\t\t\tdata-materia=\"f3b34399d9614f778583d929a1b5badda88f49ea\"\n\t\t\t\t\t\tdata-comision=\"edc8272485f2c19f28d72fd97c5e122a6ecd47e7\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\tDar de baja\n\t\t\t\t\t\t<\/button>\n\t\t\t\t\t\t\t\n\t\t\t\t<\/td>\n\t\t\t<\/tr>\n\t\t\t\t\t<\/table>\n\t<\/div>\t    ","clase_js":"info_materia","tiene_archivo_js":"1"});</script><script type='text/javascript'>kernel.renderer.on_arrival({"css":["\/fceia\/_comp\/siu\/operaciones\/_comun\/pagelets\/lista_materias\/default.css"],"js":["\/fceia\/_comp\/siu\/operaciones\/_comun\/pagelets\/lista_materias\/pagelet_lista_materias.js","\/fceia\/_comp\/siu\/js\/filtro_lista.js"],"op":"_comun\/pagelets","info":{"id":"lista_materias","visible":"1","estado":"inicial","mensajes":[],"filtra_planes":""},"content":"<div id='filtro_materias' class=\"input-append\"><input type=\"text\" placeholder=\"Filtrar materias\" name=\"filtro\" value=\"\" id=\"filtroin\"\/><\/div><div class=\"js-filtro\"><div class=\"filtro-materia\"><span>Ver<\/span><div class=\"btn-group\" data-toggle=\"buttons-radio\"><button type=\"button\" role=\"button\" aria-pressed=\"true\" class=\"btn btn-mini active js-mostrar-todas-materias\">Todas las materias<\/button><button type=\"button\" role=\"button\" aria-pressed=\"false\" class=\"btn btn-mini js-mostrar-materias-solo-inscriptas\">S\u00f3lo inscriptas<\/button><\/div><\/div><\/div><div id='js-listado-materias'><ul class=\"nav nav-list\"><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/9d69b118b7b72b1dbe8b04455c6930fce237d1c4' role=\"button\" title='Seleccionar (F13) LEGISLACION Y ORGANIZACION DE EMPRESAS' ><span class='js-filter-content'>(F13) LEGISLACION Y ORGANIZACION DE EMPRESAS<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/572d300ccda93b94dbba1c603260d57a6aee3e48' role=\"button\" title='Seleccionar (F14) GESTION DE LA CALIDAD Y DE LAS OPERACIONES' ><span class='js-filter-content'>(F14) GESTION DE LA CALIDAD Y DE LAS OPERACIONES<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/0ee44a83d5a14b3418ee7d27e367d7898a9ee9db' role=\"button\" title='Seleccionar (F15) HIGIENE Y SEGURIDAD Y GESTION AMBIENTAL' ><span class='js-filter-content'>(F15) HIGIENE Y SEGURIDAD Y GESTION AMBIENTAL<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/38059e3897ea22cc2c10551c01675064908b95e8' role=\"button\" title='Seleccionar (F17) ECONOMIA Y COSTOS' ><span class='js-filter-content'>(F17) ECONOMIA Y COSTOS<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/e6e87e5cc658ea8c0ee0d0f3223aacde3267fb09' role=\"button\" title='Seleccionar (F18) EMPRENDEDORISMO Y EVALUACION DE PROYECTOS DE INVERSION' ><span class='js-filter-content'>(F18) EMPRENDEDORISMO Y EVALUACION DE PROYECTOS DE INVERSION<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/4ff2582caaebaf124eca310e0f4e35315f076ae4' role=\"button\" title='Seleccionar (FI0) INGLES' ><span class='js-filter-content'>(FI0) INGLES<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/c4d6975c9368c579292cf14d230b64b0df0780b1' role=\"button\" title='Seleccionar (M13) METROLOGIA Y CALIDAD' ><span class='js-filter-content'>(M13) METROLOGIA Y CALIDAD<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/aade04ef8020f0721018e5c39cc7756235c935bf' role=\"button\" title='Seleccionar (M15) TRANSFORMACION Y UNION DE MATERIALES' ><span class='js-filter-content'>(M15) TRANSFORMACION Y UNION DE MATERIALES<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/fd0ec7aa42063e926aafaa1e74a2beaf7d06e046' role=\"button\" title='Seleccionar (M16) TECNOLOGIA DE FABRICACION' ><span class='js-filter-content'>(M16) TECNOLOGIA DE FABRICACION<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/53d53f458eceb548ae947a78247baf99cd266afb' role=\"button\" title='Seleccionar (M18) TRANSFERENCIA DE MASA Y ENERGIA' ><span class='js-filter-content'>(M18) TRANSFERENCIA DE MASA Y ENERGIA<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/c6253bb4e1de97910cde8b480b2418db36b503d4' role=\"button\" title='Seleccionar (M19) HIDRAULICA  NEUMATICA Y AUTOMATIZACION DIGITAL' ><span class='js-filter-content'>(M19) HIDRAULICA  NEUMATICA Y AUTOMATIZACION DIGITAL<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/37393483188014d07fecafb1f6df46575c97a1dc' role=\"button\" title='Seleccionar (M20) COMPORTAMIENTO Y ENSAYO DE MATERIALES' ><span class='js-filter-content'>(M20) COMPORTAMIENTO Y ENSAYO DE MATERIALES<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/998edff48bd66aaedec0352e1757ca99a7b52a41' role=\"button\" title='Seleccionar (M22) MAQUINAS TERMICAS' ><span class='js-filter-content'>(M22) MAQUINAS TERMICAS<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/4f46d53f4d84e7938d98bf825e6ac75a79f59e83' role=\"button\" title='Seleccionar (M23) INSTALACIONES ELECTRICAS Y SISTEMAS DE CONTROL' ><span class='js-filter-content'>(M23) INSTALACIONES ELECTRICAS Y SISTEMAS DE CONTROL<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/fa7c3d08773a0fa992862e289077aadc453ffaf9' role=\"button\" title='Seleccionar (M24) EQUIPOS AGROINDUSTRIALES' ><span class='js-filter-content'>(M24) EQUIPOS AGROINDUSTRIALES<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/6877ece08e9e266a44c884246b242ed7f4840b9d' role=\"button\" title='Seleccionar (M25) SISNTESIS DE MECANISMOS Y MAQUINAS' ><span class='js-filter-content'>(M25) SISNTESIS DE MECANISMOS Y MAQUINAS<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/9e8feef850e0e737cc464a895b231db1510c6e09' role=\"button\" title='Seleccionar (M10) DINAMICA DE LOS SISTEMAS FISICOS' ><span class='js-filter-content'>(M10) DINAMICA DE LOS SISTEMAS FISICOS<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/ed09677dbd3851285f11d8aaf0c0507137aa00e9' role=\"button\" title='Seleccionar (M11) ELABORACION  Y CONFORMADO DE LOS MATERIALES' ><span class='js-filter-content'>(M11) ELABORACION  Y CONFORMADO DE LOS MATERIALES<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/ee41cd5dfaed0adeb5fbc10da5e77127f1fd41cb' role=\"button\" title='Seleccionar (M12) MECANICA  APLICADA' ><span class='js-filter-content'>(M12) MECANICA  APLICADA<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/ef0b1ce3f88deb3122c8b9c36ef6c885d7d8e208' role=\"button\" title='Seleccionar (M14) ELECTROTECNOLOGIA, ELECTRONICA Y MAQUINAS ELECTRICAS' ><span class='js-filter-content'>(M14) ELECTROTECNOLOGIA, ELECTRONICA Y MAQUINAS ELECTRICAS<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/dfa0ed15106784632d576ac640c4b69e1e80f8d1' role=\"button\" title='Seleccionar (M17) DIBUJO MECANICO I' ><span class='js-filter-content'>(M17) DIBUJO MECANICO I<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/4aabf0dcc3d96786c90021c776cdf6f3e2546ed9' role=\"button\" title='Seleccionar (M2) ESTATICA' ><span class='js-filter-content'>(M2) ESTATICA<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/c37cb0f7ad878faf19e5ca8506b22dfcb9f1acd6' role=\"button\" title='Seleccionar (M21) DIBUJO MECANICO II' ><span class='js-filter-content'>(M21) DIBUJO MECANICO II<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/83c1df41a522eddb8a01e7d99cda7ebb413e56a1' role=\"button\" title='Seleccionar (M3) MECANICA DE MATERIALES' ><span class='js-filter-content'>(M3) MECANICA DE MATERIALES<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/5141a02ba54384ace679f48130513644b93973cc' role=\"button\" title='Seleccionar (M4) MECANICA DE MEDIOS CONTINUOS' ><span class='js-filter-content'>(M4) MECANICA DE MEDIOS CONTINUOS<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/c362a591cf5f0e3fa5bc23350fcfa76f859edc65' role=\"button\" title='Seleccionar (M5) TERMODINAMICA' ><span class='js-filter-content'>(M5) TERMODINAMICA<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/bf42ab7740af67dd821b78ef693891a87b2b833a' role=\"button\" title='Seleccionar (M6) ANALISIS DE MECANISMOS Y MAQUINAS' ><span class='js-filter-content'>(M6) ANALISIS DE MECANISMOS Y MAQUINAS<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/0ab3d100aec2363618a147f5bdbdb77abad02267' role=\"button\" title='Seleccionar (M7) CIENCIA DE LOS MATERIALES' ><span class='js-filter-content'>(M7) CIENCIA DE LOS MATERIALES<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/185b2f186c2d458867b55fefcd0f0fc52b9c85c3' role=\"button\" title='Seleccionar (M8) MECANICA RACIONAL' ><span class='js-filter-content'>(M8) MECANICA RACIONAL<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/2ff4afc41bad17d92285e222dfca6a63a61fa227' role=\"button\" title='Seleccionar (M9) MECANICA DE LOS FLUIDOS' ><span class='js-filter-content'>(M9) MECANICA DE LOS FLUIDOS<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/5b901c45087043c065652ad007a99104e17dd165' role=\"button\" title='Seleccionar (FB10) FISICA III' ><span class='js-filter-content'>(FB10) FISICA III<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/1fadd51015068aa79e8f81b0b821436e689e640d' role=\"button\" title='Seleccionar (FB11) QUIMICA' ><span class='js-filter-content'>(FB11) QUIMICA<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/062db59c79bea87e447f55197e28af6055ef9a91' role=\"button\" title='Seleccionar (FB12) PROBABILIDAD Y ESTADISTICA' ><span class='js-filter-content'>(FB12) PROBABILIDAD Y ESTADISTICA<\/span><\/a><\/li><li class='insc  plan_anterior'><span class=\"acchide\"><\/span><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/77c7ff0645141fc7ea545441e9fe7399d4571223' role=\"button\" title='Seleccionar (FB14) FISICA II' ><span class='js-filter-content'>(FB14) FISICA II<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/3115cdd6a655776a8c42dcb84d682cf374209e7b' role=\"button\" title='Seleccionar (FB18) CALCULO IV' ><span class='js-filter-content'>(FB18) CALCULO IV<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/01d031da10bd2e59d47302097f4f7c8c47eb0a84' role=\"button\" title='Seleccionar (FB19) METODOS NUMERICOS' ><span class='js-filter-content'>(FB19) METODOS NUMERICOS<\/span><\/a><\/li><li class='insc  plan_anterior'><span class=\"acchide\"><\/span><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/11709bbe22a834d5fcfb58579d0db8b8975a2b24' role=\"button\" title='Seleccionar (FB4) REPRESENTACION GRAFICA' ><span class='js-filter-content'>(FB4) REPRESENTACION GRAFICA<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/503a3f753abe41a1a1e82bc3ec20e5a84434bf50' role=\"button\" title='Seleccionar (FB5) CALCULO II' ><span class='js-filter-content'>(FB5) CALCULO II<\/span><\/a><\/li><li class='  plan_anterior'><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/4df7a23a11cd23f1749c7c1c13b07eb7fddc4c0e' role=\"button\" title='Seleccionar (FB7) INFORMATICA' ><span class='js-filter-content'>(FB7) INFORMATICA<\/span><\/a><\/li><li class='insc  plan_anterior'><span class=\"acchide\"><\/span><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/aed2a46b6204ff440063e9fb598c4a2a66cc9947' role=\"button\" title='Seleccionar (FB8) CALCULO III' ><span class='js-filter-content'>(FB8) CALCULO III<\/span><\/a><\/li><li class='insc  plan_anterior'><span class=\"acchide\"><\/span><a href='https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/elegir_materia\/f3b34399d9614f778583d929a1b5badda88f49ea' role=\"button\" title='Seleccionar (FB9) ALGEBRA LINEAL' ><span class='js-filter-content'>(FB9) ALGEBRA LINEAL<\/span><\/a><\/li><\/ul><\/div>","clase_js":"lista_materias","tiene_archivo_js":"1"});</script><script type='text/javascript'>kernel.renderer.on_arrival({"css":["\/fceia\/_comp\/siu\/operaciones\/_comun\/pagelets\/notificaciones\/default.css"],"js":["\/fceia\/_comp\/siu\/operaciones\/_comun\/pagelets\/notificaciones\/pagelet_notificaciones.js","\/fceia\/_comp\/siu\/js\/notificaciones.js"],"op":"_comun\/pagelets","info":{"id":"notificaciones","visible":"1","estado":"inicial","mensajes":{"error_subcomision":"notificaciones.errores.subcomision"},"banda_horaria_cursado":{"HMIN":"03:00:00","HMAX":"23:40:00","min":"03:00:00","max":"24:00:00"},"asignaciones":[{"COMISION":"25760","NOMBRE":"210 Rep Gr\u00e1fica","SEDE":"00000","ANIO_ACADEMICO":"2019","PERIODO_LECTIVO":"1\u00b0 cuatrimestre","CATEDRA":"","TURNO":"N","CUPO":"35","MATERIA":"FB4","NOMBRE_MATERIA":"REPRESENTACION GRAFICA","DIA_SEMANA":"","FECHA_ASIGN_DESDE":"","FECHA_ASIGN_HASTA":"","HS_COMIENZO_CLASE":"","HS_FINALIZ_CLASE":"","AULA":"","NOMBRE_AULA":"","EDIFICIO":"","DESC_GRILLA_CODIGO":"(FB4)                                                                                                                                                                                                                                                                                                         ","DESC_GRILLA_NOMBRE":"REPRESENTACION GRAFICA -                                                                                                                                                                                                                                                                                                               "},{"COMISION":"25806","NOMBRE":"110 F\u00edsica II","SEDE":"00000","ANIO_ACADEMICO":"2019","PERIODO_LECTIVO":"1\u00b0 cuatrimestre","CATEDRA":"","TURNO":"M","CUPO":"72","MATERIA":"FB14","NOMBRE_MATERIA":"FISICA II","DIA_SEMANA":"","FECHA_ASIGN_DESDE":"","FECHA_ASIGN_HASTA":"","HS_COMIENZO_CLASE":"","HS_FINALIZ_CLASE":"","AULA":"","NOMBRE_AULA":"","EDIFICIO":"","DESC_GRILLA_CODIGO":"(FB14)                                                                                                                                                                                                                                                                                                        ","DESC_GRILLA_NOMBRE":"FISICA II -                                                                                                                                                                                                                                                                                                                            "},{"COMISION":"25721","NOMBRE":"140 Alg Lineal","SEDE":"00000","ANIO_ACADEMICO":"2019","PERIODO_LECTIVO":"1\u00b0 cuatrimestre","CATEDRA":"","TURNO":"T","CUPO":"85","MATERIA":"FB9","NOMBRE_MATERIA":"ALGEBRA LINEAL","DIA_SEMANA":"","FECHA_ASIGN_DESDE":"","FECHA_ASIGN_HASTA":"","HS_COMIENZO_CLASE":"","HS_FINALIZ_CLASE":"","AULA":"","NOMBRE_AULA":"","EDIFICIO":"","DESC_GRILLA_CODIGO":"(FB9)                                                                                                                                                                                                                                                                                                         ","DESC_GRILLA_NOMBRE":"ALGEBRA LINEAL -                                                                                                                                                                                                                                                                                                                       "},{"COMISION":"25731","NOMBRE":"150 C\u00e1lculo III","SEDE":"00000","ANIO_ACADEMICO":"2019","PERIODO_LECTIVO":"1\u00b0 cuatrimestre","CATEDRA":"","TURNO":"T","CUPO":"70","MATERIA":"FB8","NOMBRE_MATERIA":"CALCULO III","DIA_SEMANA":"","FECHA_ASIGN_DESDE":"","FECHA_ASIGN_HASTA":"","HS_COMIENZO_CLASE":"","HS_FINALIZ_CLASE":"","AULA":"","NOMBRE_AULA":"","EDIFICIO":"","DESC_GRILLA_CODIGO":"(FB8)                                                                                                                                                                                                                                                                                                         ","DESC_GRILLA_NOMBRE":"CALCULO III -                                                                                                                                                                                                                                                                                                                          "}],"url_refresh":"https:\/\/guaraniweb.unr.edu.ar:443\/fceia\/cursada\/info_notificaciones"},"content":"                <h3>Inscripciones<\/h3>\n        \t\t<select id='eleccion-periodo' class=\"span12\">\n\t\t    <option value='quincena'>Quincena<\/option> \n\t\t    <option value='mes'>Mes<\/option> \n\t\t    <option value='trimestre'>Trimestre<\/option> \n\t\t    <option value='cuatrimestre' selected>Cuatrimestre<\/option> \n\t\t    <option value='semestre'>Semestre<\/option> \n\t\t<\/select>\n\n\t    <div class=\"coda-slider-wrapper\">\n\t\t    <div class=\"scrollable\" id=\"asignaciones_cursada\"><\/div>\n\t\t    <!--<div>\n\t\t\t    <div id=\"coda-nav-left-1\" class=\"coda-nav-left\"><a href=\"#\" title=\"Slide left\">&#171;<\/a><\/div>\n\t\t\t    <div id=\"coda-nav-right-1\" class=\"coda-nav-right\"><a href=\"#\" title=\"Slide right\">&#187;<\/a><\/div>\n\t\t    <\/div>-->\n\t    <\/div>\n\t    <div id=\"asignaciones_cursada_mensajes\">\n\t    <\/div>\n                <hr\/>\n        <h3>Inscripci\u00f3n a ex\u00e1menes<\/h3>\n        <p id=\"inscripcion_examenes_notificacion\">Los ex\u00e1menes a los que te inscribas aparecer\u00e1n aqu\u00ed.<\/p>\n\n\t\t\t<ul class=\"notif_examenes_listado\">\n\t\t\t\t\t\t\t<\/ul>\n                ","clase_js":"notificaciones","tiene_archivo_js":"1"});</script><script type='text/javascript'>kernel_config.pagelet_count = 3</script>
+					</div>
+        
+        <footer>
+    <div class='container'>
+	<div class="row">
+	    <div class="span6">
+		<div id='copyleft'>
+
+		</div>
+	    </div>
+	    <div class="span6">
+		<div id='copyright'>
+
+		</div>
+	    </div>
+	</div>
+    </div>
+</footer>    </body>
+</html>
